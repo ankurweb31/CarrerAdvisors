@@ -1,62 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrer Advisors</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: #333;
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-        }
-
-        p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        button {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>Career Advisors</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
+    <header>
+        <h1>Career Advisors</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="container">
-        <h1>Welcome to Carrer Advisors</h1>
-        <p>Enlightning paths, Empowering futures.</p>
-        <a href="./story.html">See Stories</a>
-    </div>
+    <main>
+        <section class="intro">
+            <h2>Welcome to Career Advisors</h2>
+            <p>Your go-to source for career advice and insights.</p>
+        </section>
 
+        <section class="blog-posts">
+            <!-- Articles will be inserted here -->
+        </section>
+
+        <button id="add-article">Add More Articles</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Career Advisors. All Rights Reserved.</p>
+    </footer>
 </body>
-
 </html>

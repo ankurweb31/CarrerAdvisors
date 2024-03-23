@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #FF9A8C, #FF6A88, #ABE9CD);
+    color: #333;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FF6A88;
+}
+
+.intro {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.blog-posts {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.blog-posts article {
+    flex: 0 0 30%;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.blog-posts article h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.blog-posts article p {
+    font-size: 1em;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #FF6A88;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #333;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+#add-article {
+    display: block;
+    margin: 50px auto;
+    padding: 10px 20px;
+    background-color: #FF6A88;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#add-article:hover {
+    background-color: #FF9A8C;
+}
