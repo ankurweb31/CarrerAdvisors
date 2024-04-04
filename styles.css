@@ -1,113 +1,248 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(45deg, #FF9A8C, #FF6A88, #ABE9CD);
-    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-header {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px 0;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #007bff, #ff0066);
+    color: white;
     text-align: center;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-header h1 {
-    font-size: 2.5em;
-}
-
-nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline;
+.navbar a {
     margin: 0 15px;
-}
-
-nav ul li a {
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    color: white;
+    transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #FF6A88;
+.navbar a:hover {
+    color: #ccc;
 }
 
-.intro {
-    padding: 50px 0;
-    text-align: center;
+.navbar-logo {
+    width: 50px;
+    height: 50px;
+    background: url('https://www.sbilife.co.in/images/logo-gradient.png') no-repeat center;
+    background-size: contain;
 }
 
-.intro h2 {
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.page {
+    padding: 40px 0;
+}
+
+.page h2 {
     font-size: 2em;
     margin-bottom: 20px;
 }
 
-.blog-posts {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 50px 0;
+.page p {
+    font-size: 1.2em;
+    line-height: 1.6;
 }
 
-.blog-posts article {
-    flex: 0 0 30%;
-    background-color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 30px;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.blog-posts article h3 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
-}
-
-.blog-posts article p {
-    font-size: 1em;
-}
-
-.read-more {
+.btn {
     display: inline-block;
-    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
     text-decoration: none;
-    color: #FF6A88;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
-.read-more:hover {
-    color: #333;
+.btn:hover {
+    background-color: #0056b3;
 }
 
 footer {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #333;
+    color: white;
     text-align: center;
     padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    margin-top: 40px;
 }
 
-#add-article {
+form label {
     display: block;
-    margin: 50px auto;
-    padding: 10px 20px;
-    background-color: #FF6A88;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin-bottom: 5px;
+    font-size: 1.2em;
 }
 
-#add-article:hover {
-    background-color: #FF9A8C;
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1.2em;
+}
+
+form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.slider-item {
+    flex: 0 0 auto;
+    width: 80%;
+    margin-right: 20px;
+    scroll-snap-align: start;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient Background */
+.gradient-bg {
+    background: linear-gradient(90deg, #007bff, #ff0066);
+    color: white;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 0 0 calc(50% - 20px);
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
+
+    .navbar-logo {
+        margin-right: 0;
+    }
+
+    .page {
+        padding: 30px 0;
+    }
+
+    .page h2 {
+        font-size: 1.8em;
+    }
+
+    .page p {
+        font-size: 1em;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+        font-size: 1em;
+    }
+
+    .slider-item {
+        flex: 0 0 auto;
+        width: 90%;
+        margin-right: 10px;
+        scroll-snap-align: start;
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card {
+        flex: 0 0 100%;
+        margin-right: 0;
+    }
 }
