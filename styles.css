@@ -12,7 +12,7 @@ body {
 }
 
 .navbar {
-  background: linear-gradient(90deg, #007bff, #ff0066);
+  background: linear-gradient(90deg, #007bff, #287195);
   color: white;
   text-align: center;
   padding: 10px 0;
@@ -40,8 +40,9 @@ body {
   height: 50px;
   background: url('images/Black\ and\ White\ Minimalist\ Fashion\ Store\ Logo.png') no-repeat center;
   background-size: contain;
-  margin-right:20px;
   order: 0;
+  margin: auto;
+  border-radius: 50px;
 }
 
 .dropdown {
@@ -122,9 +123,9 @@ body {
 
 .cover-content h1 {
   font-size: 3em;
-  margin-bottom: 20px;
 }
 
+/* Card Styles */
 .card-container {
   display: flex;
   justify-content: space-between;
@@ -185,7 +186,7 @@ form input[type="submit"]:hover {
 
 /* Footer */
 footer {
-  background-color: #333;
+  background-color: black;
   color: white;
   text-align: center;
   padding: 20px 0;
@@ -200,8 +201,8 @@ footer {
   width: 30px;
   height: 20px;
   cursor: pointer;
-  order: 1;
-  margin-left: 15px;
+  order: 2;
+  margin-right: 15px;
 }
 
 .line {
@@ -276,24 +277,68 @@ footer {
       display: flex;
   }
 
+  .open {
+      display: flex;
+  }
+
   .hamburger-menu {
       display: none;
   }
 
-  .navbar .container {
+  .hamburger-menu.active {
+      display: flex;
+  }
+}
+/* ... (previous styles) ... */
+
+@media (max-width: 768px) {
+  .navbar {
       flex-direction: column;
       align-items: flex-start;
+      padding: 10px;
+  }
+
+  .navbar-logo {
+      order: 1;
+      margin-left: 15px;
+  }
+
+  .navbar a {
+      display: none;
   }
 
   .navbar-items {
       display: none;
   }
 
-  .hamburger-menu {
-      display: none;
+  .hamburger {
+      display: flex;
   }
 
-  .open {
+  .hamburger-menu {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      z-index: 999;
+      width: 100%;
+  }
+
+  .hamburger-menu a {
+      padding: 10px;
+      text-decoration: none;
+      color: white;
+      transition: background-color 0.3s;
+  }
+
+  .hamburger-menu a:hover {
+      background-color: #555;
+  }
+
+  .hamburger-menu.active {
       display: flex;
   }
 }
+
