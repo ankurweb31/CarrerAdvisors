@@ -19,14 +19,14 @@
 //     });
 // });
 // Hamburger Menu Functionality
-const hamburger = document.getElementById("hamburger");
-const hamburgerMenu = document.getElementById("hamburgerMenu");
+// const hamburger = document.getElementById("hamburger");
+// const hamburgerMenu = document.getElementById("hamburgerMenu");
 
-hamburger.addEventListener("click", () => {
-  hamburgerMenu.style.display === "none" || hamburgerMenu.style.display === ""
-    ? (hamburgerMenu.style.display = "flex")
-    : (hamburgerMenu.style.display = "none");
-});
+// hamburger.addEventListener("click", () => {
+//   hamburgerMenu.style.display === "none" || hamburgerMenu.style.display === ""
+//     ? (hamburgerMenu.style.display = "flex")
+//     : (hamburgerMenu.style.display = "none");
+// });
 
 // Smooth Scrolling
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -38,3 +38,11 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
   });
 });
+// Toggle hamburger menu
+const hamburger = document.querySelector('.hamburger');
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+
+hamburger.addEventListener('click', () => {
+    hamburgerMenu.classList.toggle('open');
+});
+
