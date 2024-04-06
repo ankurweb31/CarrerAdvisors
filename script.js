@@ -1,17 +1,40 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const contactForm = document.getElementById('contact-form');
+// // Hamburger Menu Functionality
+// const hamburger = document.getElementById('hamburger');
+// const hamburgerMenu = document.getElementById('hamburgerMenu');
 
-    contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
+// hamburger.addEventListener('click', () => {
+//     hamburgerMenu.style.display === 'none' || hamburgerMenu.style.display === ''
+//         ? hamburgerMenu.style.display = 'flex'
+//         : hamburgerMenu.style.display = 'none';
+// });
 
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+// // Smooth Scrolling
+// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//     anchor.addEventListener('click', function (e) {
+//         e.preventDefault();
 
-        // Here you can add code to send the form data to your backend or handle it as needed
-        console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+//         document.querySelector(this.getAttribute('href')).scrollIntoView({
+//             behavior: 'smooth'
+//         });
+//     });
+// });
+// Hamburger Menu Functionality
+const hamburger = document.getElementById("hamburger");
+const hamburgerMenu = document.getElementById("hamburgerMenu");
 
-        alert('Thank you for contacting us! We will get back to you soon.');
-        contactForm.reset();
+hamburger.addEventListener("click", () => {
+  hamburgerMenu.style.display === "none" || hamburgerMenu.style.display === ""
+    ? (hamburgerMenu.style.display = "flex")
+    : (hamburgerMenu.style.display = "none");
+});
+
+// Smooth Scrolling
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
     });
+  });
 });
